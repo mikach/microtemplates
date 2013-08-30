@@ -2,7 +2,7 @@
     if (typeof exports === "object") { // CommonJS
         module.exports = def;
     } else if (typeof define === "function" && define.amd) { // RequireJS
-        define(def);
+        define(function() { return def; });
     } else { // <script>
         microtpl = def;
     }
