@@ -13,8 +13,8 @@
   String.prototype.replace.call(text, /[\r\t\n]/g, " ").split(pattern || /<%|%>/).forEach(function(a,i) {
     fnBody += i%2 ? (a[0] == '=' ? 'p.push(' + a.substr(1) + ');' : a) : 'p.push(\'' + a + '\');';
   });
+  
   fnBody += '}return p.join("")';
 
   return new Function("o", fnBody);
-
 });
