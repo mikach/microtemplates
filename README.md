@@ -10,7 +10,12 @@ Example1 (typical usage):
 ```js
 var s = '<div class="users"><% for ( var i = 0; i < users.length; i++ ) { %>' + 
         '<li><%=users[i].name%></a></li> <% } %></div>';
-var data = { users: [   { name: 'first' }, { name: 'second' } ] };
+var data = { 
+  users: [   
+    { name: 'first' },
+    { name: 'second' } 
+  ] 
+};
 
 microtpl(s)(data);
 ```
